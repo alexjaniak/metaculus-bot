@@ -33,6 +33,7 @@ from forecasting_tools import (
 
 dotenv.load_dotenv()
 logger = logging.getLogger(__name__)
+SUMMER_2026_FUTUREEVAL_TOURNAMENT_ID = 33022
 
 
 class SpringTemplateBot2026(ForecastBot):
@@ -691,7 +692,7 @@ if __name__ == "__main__":
         # You may want to change this to the specific tournament ID you want to forecast on
         seasonal_tournament_reports = asyncio.run(
             template_bot.forecast_on_tournament(
-                client.CURRENT_AI_COMPETITION_ID, return_exceptions=True
+                SUMMER_2026_FUTUREEVAL_TOURNAMENT_ID, return_exceptions=True
             )
         )
         minibench_reports = asyncio.run(
